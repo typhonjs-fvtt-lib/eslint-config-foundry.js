@@ -55,8 +55,8 @@ Latest version: `0.7.9`
 
 All versions:
 - `0.7.8` - `0.7.9`
-- `latest`
-- `latest-0.7.x`
+- `latest` (0.7.9)
+- `latest-0.7.x` (0.7.9)
 
 To reference a particular version in the eslint `extends` field specify it via `/<version>` from the list above.
 
