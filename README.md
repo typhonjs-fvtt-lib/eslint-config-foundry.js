@@ -15,14 +15,6 @@ defined in `foundry.js`!
 Please see the `.eslintrc` file in [demo-rollup-module](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc) 
 for a complete example. 
 
-Latest version: 0.7.9
-
-All versions: 
-- 0.7.8
-- 0.7.9
-- latest
-- latest-0.7.x
-
 ### Installation:
 
 `npm install --save-dev @typhonjs-fvtt/eslint-config-foundry.js` or add to `package.json`.
@@ -51,6 +43,20 @@ Create a minimal `.eslintrc` file in the root path of a project.
   }
 }
 ```
+
+### Versions:
+
+This module follows the semantic versioning of Foundry VTT. You will also be able to target specific versions described
+below. The `latest` config which is the `default` will match the version of this module. So if you install
+`@typhonjs-fvtt/eslint-config-foundry.js@0.7.9` the default and latest eslint config corresponds with the `0.7.9`
+release of Foundry VTT (foundry.js).
+
+Latest version: `0.7.9`
+
+All versions:
+- `0.7.8` - `0.7.9`
+- `latest`
+- `latest-0.7.x`
 
 To reference a particular version in the eslint `extends` field specify it via `/<version>` from the list above.
 

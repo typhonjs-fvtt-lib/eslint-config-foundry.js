@@ -1,6 +1,6 @@
 {
   "name": "@typhonjs-fvtt/eslint-config-foundry.js",
-  "version": "0.1.0",
+  "version": "0.7.9",
   "description": "Provides ESLint config files defining all globals in Foundry VTT / foundry.js",
   "homepage": "https://github.com/typhonjs-fvtt/eslint-config-foundry.js",
   "license": "MIT",
