@@ -46,33 +46,72 @@ variables.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
 
 const filePath = `.${path.sep}${process.env.TARGET}.js`;
 
-let output = `// Global classes, functions, variables defined in foundry.js (${process.env.TARGET}).
+let output = `// Global classes, functions, variables defined in commons module & foundry.js (${process.env.TARGET}).
 module.exports = {
   "globals": {
     // Other
     "Handlebars": "readonly",
     "HandlebarsIntl": "readonly",\r\n`
 
-output += `\r\n    // Classes\r\n`;
+// Hand entry of commons module data.
+output +=`
+    // Commons module Classes
+    "Collection": "readonly",
+    "Semaphore": "readonly",
+
+    // Commons module Functions
+    "benchmark": "readonly",
+    "colorStringToHex": "readonly",
+    "debounce": "readonly",
+    "deepClone": "readonly",
+    "diffObject": "readonly",
+    "duplicate": "readonly",
+    "encodeURL": "readonly",
+    "expandObject": "readonly",
+    "filterObject": "readonly",
+    "flattenObject": "readonly",
+    "getParentClasses": "readonly",
+    "getProperty": "readonly",
+    "getRoute": "readonly",
+    "getType": "readonly",
+    "hasProperty": "readonly",
+    "hexToRGB": "readonly",
+    "hexToRGBAString": "readonly",
+    "hsvToRgb": "readonly",
+    "invertObject": "readonly",
+    "isNewerVersion": "readonly",
+    "isObjectEmpty": "readonly",
+    "mergeObject": "readonly",
+    "randomID": "readonly",
+    "rgbToHex": "readonly",
+    "rgbToHsv": "readonly",
+    "setProperty": "readonly",
+    "timeSince": "readonly",
+
+    // Commons module Variables
+    "foundry": "readonly",
+    "CONST": "readonly",\r\n`;
+
+output += `\r\n    // Foundry.js Classes\r\n`;
 
 classes.forEach((entry) =>
 {
-   output += `    "${entry}": "readonly",\r\n`
+   output += `    "${entry}": "readonly",\r\n`;
 })
 
-output += `\r\n    // Functions\r\n`;
+output += `\r\n    // Foundry.js Functions\r\n`;
 
 functions.forEach((entry) =>
 {
-   output += `    "${entry}": "readonly",\r\n`
+   output += `    "${entry}": "readonly",\r\n`;
 })
 
-output += `\r\n    // Variables\r\n`;
+output += `\r\n    // Foundry.js Variables\r\n`;
 
 variables.forEach((entry, index, array) =>
 {
    // Do not insert a comma for the last index in the array.
-   output += `    "${entry}": "readonly"${index === array.length - 1 ? '' : ','}\r\n`
+   output += `    "${entry}": "readonly"${index === array.length - 1 ? '' : ','}\r\n`;
 })
 
 output +=

@@ -12,6 +12,9 @@ only defines the `foundry.js` globals for use with directives like `no-shadow` o
 are using Typescript. Enable ESLint in your IDE of choice and feel relief that you are not overwriting any globals
 defined in `foundry.js`!
 
+As of the `0.8.0` release of Foundry VTT this ESLint configuration file includes the globals exported by the Foundry VTT 
+commons module.
+
 Please see the `.eslintrc` file in [demo-rollup-module](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc) 
 for a complete example. 
 
@@ -48,14 +51,16 @@ Create a minimal `.eslintrc` file in the root path of a project.
 
 This module follows the semantic versioning of Foundry VTT. You will also be able to target specific versions described
 below. The `latest` config which is the `default` will match the version of this module. So if you install
-`@typhonjs-fvtt/eslint-config-foundry.js@0.7.9` the default and latest eslint config corresponds with the `0.7.9`
+`@typhonjs-fvtt/eslint-config-foundry.js@0.8.0` the default and latest eslint config corresponds with the `0.8.0`
 release of Foundry VTT (foundry.js).
 
-Latest version: `0.7.9`
+Latest version: `0.8.0`
 
 All versions:
+- `0.8.0`
 - `0.7.8` - `0.7.9`
-- `latest` (0.7.9)
+- `latest` (0.8.0)
+- `latest-0.8.x` (0.8.0)
 - `latest-0.7.x` (0.7.9)
 
 To reference a particular version in the eslint `extends` field specify it via `/<version>` from the list above.

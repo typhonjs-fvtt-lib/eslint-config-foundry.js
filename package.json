@@ -1,7 +1,7 @@
 {
   "name": "@typhonjs-fvtt/eslint-config-foundry.js",
-  "version": "0.7.9",
-  "description": "Provides ESLint config files defining all globals in Foundry VTT / foundry.js",
+  "version": "0.8.0",
+  "description": "Provides a shared ESLint config file defining all globals in Foundry VTT / commons module & foundry.js",
   "homepage": "https://github.com/typhonjs-fvtt/eslint-config-foundry.js",
   "license": "MIT",
   "author": {
@@ -22,7 +22,7 @@
     "cross-env": "^7.0.0"
   },
   "scripts": {
-    "parse": "cross-env TARGET=0.7.9 node ./src/parseData.mjs"
+    "parse": "cross-env TARGET=0.8.0 node ./src/parseData.mjs"
   },
   "keywords": [
     "typhonjs",
@@ -34,9 +34,11 @@
   ],
   "main": "latest.js",
   "files": [
-    "0.7.8.js",
+    "0.8.0.js",
     "0.7.9.js",
+    "0.7.8.js",
     "latest.js",
+    "latest-0.8.x.js",
     "latest-0.7.x.js"
   ],
   "directories": {},
