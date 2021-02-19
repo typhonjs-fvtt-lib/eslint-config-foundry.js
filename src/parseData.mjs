@@ -18,27 +18,45 @@ if (!(data instanceof Array))
    throw new Error(`Doc data is invalid: ${dataPath}`);
 }
 
-//ModuleVariable, ModuleFunction, ModuleClass
-
 const classes = [];
 const functions = [];
 const variables = [];
+
+const allNames = new Set();
+
+const uniqueName = (array, name) =>
+{
+   if (!allNames.has(name))
+   {
+      array.push(name);
+      allNames.add(name);
+   }
+}
 
 data.forEach((entry) =>
 {
    switch(entry.kind)
    {
       case 'ModuleClass':
-         classes.push(entry.name);
+         uniqueName(classes, entry.name);
+         // classes.push(entry.name);
          break;
       case 'ModuleFunction':
-         functions.push(entry.name);
+         uniqueName(functions, entry.name);
+         // functions.push(entry.name);
          break;
       case 'ModuleVariable':
-         variables.push(entry.name);
+         uniqueName(variables, entry.name);
+         // variables.push(entry.name);
          break;
    }
 });
+
+// TODO: Note manual insertion of a few foundry.js 0.8.0 variables applied directly to `globalThis`
+uniqueName(variables, 'canvas');
+uniqueName(variables, 'logger');
+uniqueName(variables, 'ui');
+
 
 classes.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
 functions.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));

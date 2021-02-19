@@ -269,13 +269,16 @@ module.exports = {
     "_appId": "readonly",
     "_maxZ": "readonly",
     "BLEND_MODES": "readonly",
+    "canvas": "readonly",
     "CONFIG": "readonly",
     "game": "readonly",
+    "logger": "readonly",
     "MIN_WINDOW_HEIGHT": "readonly",
     "MIN_WINDOW_WIDTH": "readonly",
     "socket": "readonly",
     "TabsV2": "readonly",
     "twist": "readonly",
+    "ui": "readonly",
     "vtt": "readonly"
   }
 }
