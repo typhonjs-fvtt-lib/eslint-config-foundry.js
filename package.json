@@ -1,7 +1,7 @@
 {
   "name": "@typhonjs-fvtt/eslint-config-foundry.js",
   "version": "0.8.0",
-  "description": "Provides a shared ESLint config file defining all globals in Foundry VTT / commons module & foundry.js",
+  "description": "Provides a shared ESLint config files defining all globals in Foundry VTT / commons module & foundry.js",
   "homepage": "https://github.com/typhonjs-fvtt/eslint-config-foundry.js",
   "license": "MIT",
   "author": {
@@ -39,6 +39,7 @@
     "0.8.0.js",
     "0.7.9.js",
     "0.7.8.js",
+    "diff-0.7.9-0.8.0.js",
     "latest.js",
     "latest-0.8.x.js",
     "latest-0.7.x.js"
