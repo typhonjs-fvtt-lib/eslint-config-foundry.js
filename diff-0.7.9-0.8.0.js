@@ -1,7 +1,6 @@
 // Diff set of classes, functions, variables no longer defined on the script and global scope. (0.7.9-0.8.0).
 module.exports = {
   "globals": {
-
     // Classes
     "EmbeddedEntity": "readonly",
     "Entity": "readonly",

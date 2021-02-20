@@ -13,7 +13,7 @@ const filePath = `.${path.sep}diff-${versionString}.js`;
 
 let output = `// Diff set of classes, functions, variables no longer defined on the script and global scope. (${versionString}).
 module.exports = {
-  "globals": {\r\n`;
+  "globals": {`;
 
 if (data.classes.length)
 {
