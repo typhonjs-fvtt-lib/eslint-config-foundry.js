@@ -23,7 +23,7 @@ if (data.common.classes.length)
    data.common.classes.forEach((entry) =>
    {
       output += `    "${entry}": "readonly",\r\n`;
-   })
+   });
 }
 
 if (data.common.functions.length)
@@ -33,7 +33,7 @@ if (data.common.functions.length)
    data.common.functions.forEach((entry) =>
    {
       output += `    "${entry}": "readonly",\r\n`;
-   })
+   });
 }
 
 if (data.common.variables.length)
@@ -43,7 +43,7 @@ if (data.common.variables.length)
    data.common.variables.forEach((entry) =>
    {
       output += `    "${entry}": "readonly",\r\n`;
-   })
+   });
 }
 
 if (data.foundry.classes.length)
@@ -53,7 +53,7 @@ if (data.foundry.classes.length)
    data.foundry.classes.forEach((entry) =>
    {
       output += `    "${entry}": "readonly",\r\n`;
-   })
+   });
 }
 
 if (data.foundry.functions.length)
@@ -63,7 +63,7 @@ if (data.foundry.functions.length)
    data.foundry.functions.forEach((entry) =>
    {
       output += `    "${entry}": "readonly",\r\n`;
-   })
+   });
 }
 
 if (data.foundry.variables.length)
@@ -74,7 +74,7 @@ if (data.foundry.variables.length)
    {
       // Do not insert a comma for the last index in the array.
       output += `    "${entry}": "readonly"${index === array.length - 1 ? '' : ','}\r\n`;
-   })
+   });
 }
 
 output +=

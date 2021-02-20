@@ -12,8 +12,10 @@ only defines the `foundry.js` globals for use with directives like `no-shadow` o
 are using Typescript. Enable ESLint in your IDE of choice and feel relief that you are not overwriting any globals
 defined in `foundry.js`!
 
-As of the `0.8.0` release of Foundry VTT this ESLint configuration file includes the globals exported by the Foundry VTT 
-commons module.
+As of the `0.8.0` release of Foundry VTT the ESLint configuration files include the globals exported by the Foundry VTT 
+commons module. In addition, there are now difference set ESLint configuration files which use the 
+`no-restricted-globals` rule to quickly show usages of globals that are no longer defined by Foundry VTT which is useful
+when migrating code between major versions; IE `0.7.9` to `0.8.0`. 
 
 Please see the `.eslintrc` file in [demo-rollup-module](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc) 
 for a complete example. 
@@ -28,7 +30,7 @@ Create a minimal `.eslintrc` file in the root path of a project.
 
 ```
 /**
- * Loads https://github.com/typhonjs-fvtt/eslint-config-foundry.js/latest
+ * Loads https://github.com/typhonjs-fvtt/eslint-config-foundry.js/blob/main/0.8.0.js
  * NPM: https://www.npmjs.com/package/@typhonjs-fvtt/eslint-config-foundry.js
  *
  * Note: specific versions are located in /<VERSION>
@@ -46,6 +48,18 @@ Create a minimal `.eslintrc` file in the root path of a project.
   }
 }
 ```
+
+To enable the Foundry VTT 0.7.9 to 0.8.0 difference set use the following:
+```
+/**
+ * Loads https://github.com/typhonjs-fvtt/eslint-config-foundry.js/blob/main/diff-0.7.9-0.8.0.js
+ * NPM: https://www.npmjs.com/package/@typhonjs-fvtt/eslint-config-foundry.js
+ */
+{
+  "extends": "@typhonjs-fvtt/eslint-config-foundry.js/diff-0.7.9-0.8.0"
+}
+```
+
 
 ### Versions:
 

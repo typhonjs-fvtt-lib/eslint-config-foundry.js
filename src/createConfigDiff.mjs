@@ -13,40 +13,52 @@ const filePath = `.${path.sep}diff-${versionString}.js`;
 
 let output = `// Diff set of classes, functions, variables no longer defined on the script and global scope. (${versionString}).
 module.exports = {
-  "globals": {`;
+  "rules": {
+    "no-restricted-globals": [
+      "error",`;
 
 if (data.classes.length)
 {
-   output +=`\r\n    // Classes\r\n`;
+   output +=`\r\n      // Classes\r\n`;
 
    data.classes.forEach((entry) =>
    {
-      output += `    "${entry}": "readonly",\r\n`;
-   })
+      output += `      {\r\n`;
+      output += `        "name": "${entry}",\r\n`;
+      output += `        "message": "FoundryVTT - No longer available on the global scope."\r\n`;
+      output += `      },\r\n`;
+   });
 }
 
 if (data.functions.length)
 {
-   output +=`\r\n    // Functions\r\n`;
+   output +=`\r\n      // Functions\r\n`;
 
    data.functions.forEach((entry) =>
    {
-      output += `    "${entry}": "readonly",\r\n`;
-   })
+      output += `      {\r\n`;
+      output += `        "name": "${entry}",\r\n`;
+      output += `        "message": "FoundryVTT - No longer available on the global scope."\r\n`;
+      output += `      },\r\n`;
+   });
 }
 
 if (data.variables.length)
 {
-   output +=`\r\n    // Variables\r\n`;
+   output +=`\r\n      // Variables\r\n`;
 
    data.variables.forEach((entry, index, array) =>
    {
-      output += `    "${entry}": "readonly"${index === array.length - 1 ? '' : ','}\r\n`;
-   })
+      output += `      {\r\n`;
+      output += `        "name": "${entry}",\r\n`;
+      output += `        "message": "FoundryVTT - No longer available on the global scope."\r\n`;
+      output += `      }${index === array.length - 1 ? '' : ','}\r\n`;
+   });
 }
 
 output +=
-`  }
+`    ]
+  }
 }`;
 
 fs.writeFileSync(filePath, output, 'utf8');
