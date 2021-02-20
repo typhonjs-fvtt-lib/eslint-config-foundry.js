@@ -1,0 +1,39 @@
+{
+  "classes": [
+    "Collection",
+    "Semaphore"
+  ],
+  "functions": [
+    "benchmark",
+    "colorStringToHex",
+    "debounce",
+    "deepClone",
+    "diffObject",
+    "duplicate",
+    "encodeURL",
+    "expandObject",
+    "filterObject",
+    "flattenObject",
+    "getParentClasses",
+    "getProperty",
+    "getRoute",
+    "getType",
+    "hasProperty",
+    "hexToRGB",
+    "hexToRGBAString",
+    "hsvToRgb",
+    "invertObject",
+    "isNewerVersion",
+    "isObjectEmpty",
+    "mergeObject",
+    "randomID",
+    "rgbToHex",
+    "rgbToHsv",
+    "setProperty",
+    "timeSince"
+  ],
+  "variables": [
+    "foundry",
+    "CONST"
+  ]
+}

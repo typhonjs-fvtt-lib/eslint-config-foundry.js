@@ -22,7 +22,9 @@
     "cross-env": "^7.0.0"
   },
   "scripts": {
-    "parse": "cross-env TARGET=0.8.0 node ./src/parseData.mjs"
+    "consoleDiff": "cross-env PREVIOUS=0.7.9 NEXT=0.8.0 node ./src/consoleDiff.mjs",
+    "createConfig": "cross-env TARGET=0.8.0 node ./src/createConfig.mjs",
+    "createConfigDiff": "cross-env PREVIOUS=0.7.9 NEXT=0.8.0 node ./src/createConfigDiff.mjs"
   },
   "keywords": [
     "typhonjs",

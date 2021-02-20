@@ -54,11 +54,15 @@ below. The `latest` config which is the `default` will match the version of this
 `@typhonjs-fvtt/eslint-config-foundry.js@0.8.0` the default and latest eslint config corresponds with the `0.8.0`
 release of Foundry VTT (foundry.js).
 
+The `diff` ESLint configs include a difference set of data dropped between versions specified. This config will quickly 
+find any usages of classes, functions and variables that are no longer available via the script and global scope.  
+
 Latest version: `0.8.0`
 
 All versions:
 - `0.8.0`
 - `0.7.8` - `0.7.9`
+- `diff-0.7.9-0.8.0` (0.7.9 - 0.8.0)
 - `latest` (0.8.0)
 - `latest-0.8.x` (0.8.0)
 - `latest-0.7.x` (0.7.9)
