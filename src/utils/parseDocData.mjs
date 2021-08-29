@@ -89,13 +89,18 @@ export default function parseDocData(version)
    });
 
    // TODO: Note manual insertion of a few foundry.js 0.8.0 variables applied directly to `globalThis` or `window`.
+   // In particular this is accurate for Foundry 0.8.9
    if (versionFloat >= 0.8)
    {
-      uniqueName(foundry.variables, 'canvas');     // line 4255 globalThis.canvas set in Game->constructor
-      uniqueName(foundry.variables, 'FEATURES');   // line 20 window.FEATURES set
-      uniqueName(foundry.variables, 'keyboard');   // line 4698 window.keyboard set in `Game.initializeKeyboard`
-      uniqueName(foundry.variables, 'logger');     // line 13 globalThis.logger set
-      uniqueName(foundry.variables, 'ui');         // line 10 globalThis.ui set
+      uniqueName(foundry.variables, 'canvas');     // line 4097 globalThis.canvas set in Game->constructor
+      uniqueName(foundry.variables, 'FEATURES');   // line 32 window.FEATURES set
+      uniqueName(foundry.variables, 'game');       // line 3 globalThis.game set
+      uniqueName(foundry.variables, 'keyboard');   // line 4551 window.keyboard set in `Game.initializeKeyboard`
+      uniqueName(foundry.variables, 'logger');     // line 25 globalThis.logger set
+      uniqueName(foundry.variables, 'socket');     // line 4 globalThis.socket set
+      uniqueName(foundry.variables, '_token');     // line 46211 "secret global" "let _token = null" set
+      uniqueName(foundry.variables, 'ui');         // line 20 globalThis.ui set
+      uniqueName(foundry.variables, 'vtt');        // line 2 globalThis.vtt set
    }
 
    foundry.classes.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));

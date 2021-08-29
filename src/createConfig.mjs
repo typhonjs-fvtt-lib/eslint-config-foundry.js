@@ -13,6 +13,7 @@ let output = `// Global classes, functions, variables defined in commons module 
 module.exports = {
   "globals": {
     // Other
+    "easyrtc": "readonly",
     "Handlebars": "readonly",
     "HandlebarsIntl": "readonly",\r\n`;
 
